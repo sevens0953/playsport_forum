@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <!-- 背景陰影 -->
+            <item>
+                <shape>
+                    <solid android:color="#e0e0e0"/>
+                    <corners android:radius="5dp"/>
+                </shape>
+            </item>
+            <!-- 前景按鈕 -->
+            <item android:bottom="4px">
+                <shape>
+                    <solid android:color="#fff"/>
+                    <corners android:radius="5dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- 背景陰影 -->
+            <item android:top="4px">
+                <shape>
+                    <solid android:color="#e0e0e0"/>
+                    <corners android:radius="5dp"/>
+                </shape>
+            </item>
+            <!-- 前景按鈕 -->
+            <item android:top="4px">
+                <shape>
+                    <gradient
+                        android:startColor="#e0e0e0"
+                        android:endColor="#fff"
+                        android:angle="270" />
+                    <corners
+                        android:radius="5dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+

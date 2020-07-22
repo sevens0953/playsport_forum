@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#039be5">
+
+    <!-- ==================== 其他登入區塊 ==================== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_signin"
+            style="@style/textview_signin"
+            android:text="登入"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--登入按鈕-->
+        <LinearLayout
+            style="@style/layout_signinbox"
+            app:layout_constraintTop_toBottomOf="@id/text_signin"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                style="@style/button_signin"
+                android:text="FB"
+                android:drawableStart="@drawable/icon_fb"/>
+
+            <Button
+                style="@style/button_signin"
+                android:text="Apple"
+                android:drawableStart="@drawable/ic_icon_apple"
+                android:layout_marginLeft="16dp"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ==================== 輸入欄位 ==================== -->
+    <ScrollView
+        android:id="@+id/scroll_enter"
+        style="@style/scroll_content"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--暱稱-->
+            <LinearLayout
+                style="@style/layout_enter">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                <EditText
+                    style="@style/layout_enter_text"
+                    android:hint="@string/en_prompt_name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/layout_enter_prompt"
+                    android:text="@string/up_prompt_name"/>
+            </LinearLayout>
+
+            <!--帳號-->
+            <LinearLayout
+                style="@style/layout_enter">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                <EditText
+                    style="@style/layout_enter_text"
+                    android:hint="@string/en_prompt_account"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/layout_enter_prompt"
+                    android:text="@string/up_prompt_account"/>
+            </LinearLayout>
+
+            <!--密碼-->
+            <LinearLayout
+                style="@style/layout_enter">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                <EditText
+                    style="@style/layout_enter_text"
+                    android:hint="@string/en_prompt_password"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/layout_enter_prompt"
+                    android:text="@string/up_prompt_password"/>
+            </LinearLayout>
+
+            <!--確認密碼-->
+            <LinearLayout
+                style="@style/layout_enter">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                <EditText
+                    style="@style/layout_enter_text"
+                    android:hint="@string/en_prompt_passwords"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/layout_enter_prompt"
+                    android:text="@string/up_prompt_passwords"/>
+            </LinearLayout>
+
+            <!--註冊按鈕-->
+            <Button
+                style="@style/button_up_png"
+                android:text="註冊" />
+
+            <!--同意玩運彩會員條款-->
+            <LinearLayout
+                style="@style/button_ok">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/up_text_agree"
+                    android:background="@drawable/bottom_line"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ==================== 其他 ==================== -->
+    <!--提示字(或免費註冊)-->
+    <TextView
+        style="@style/textview_prompt_text"
+        android:text="或免費註冊"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--關閉按鈕-->
+    <ImageButton
+        style="@style/imagebutton_off"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <!-- 測試
+    <ImageView
+        android:layout_height = "wrap_content"
+        android:layout_width = "wrap_content"
+        android:src = "@mipmap/ic_livescore" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

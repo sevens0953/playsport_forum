@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">playsport_forum</string>
+
+    <!--註冊頁提示-->
+    <string name="up_prompt_name">英數字16字內，含中文最多8字</string>
+    <string name="up_prompt_account">英文或數字</string>
+    <string name="up_prompt_password">6字以上英文或數字</string>
+    <string name="up_prompt_passwords">在輸入一次密碼</string>
+    <string name="en_prompt_name">暱稱</string>
+    <string name="en_prompt_account">帳號</string>
+    <string name="en_prompt_password">密碼</string>
+    <string name="en_prompt_passwords">確認密碼</string>
+
+    <!--同意會員條款-->
+    <string name="up_text_agree">同意玩運彩會員條款</string>
+
+</resources>
